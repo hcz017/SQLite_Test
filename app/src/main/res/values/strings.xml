@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SQLite_Test</string>
+    <string name="create_database">Create database</string>
+</resources>

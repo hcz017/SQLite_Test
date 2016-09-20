@@ -39,4 +39,11 @@
         android:layout_below="@+id/add_data"
         android:layout_alignParentStart="true"
         android:id="@+id/update_data" />
+
+    <Button
+        android:text="@string/delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_data"
+        android:id="@+id/delete_data" />
 </RelativeLayout>

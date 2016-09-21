@@ -87,5 +87,33 @@ public class MainActivity extends AppCompatActivity {
                 cursor.close();
             }
         });
+
+        Button replaceData = (Button) findViewById(R.id.replace_data);
+        replaceData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                db.beginTransaction();
+                try {
+                    db.delete("Book", null, null);
+                    if (true) {
+                        //手动抛出一个异常，让事物失败
+                        throw new NullPointerException();
+                    }
+                    ContentValues values = new ContentValues();
+                    values.put("name", "Game of thrones");
+                    values.put("author", "George Martin");
+                    values.put("pages", 770);
+                    values.put("price", 22.12);
+                    db.insert("Book", null, values);
+                    db.setTransactionSuccessful();//事务已经执行成功
+                    Log.i(TAG, "onClick: 事务已经执行成功");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    db.endTransaction();
+                }
+            }
+        });
     }
 }

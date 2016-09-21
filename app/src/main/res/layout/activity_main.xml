@@ -54,4 +54,12 @@
         android:layout_below="@+id/delete_data"
         android:layout_alignParentStart="true"
         android:id="@+id/query_data" />
+
+    <Button
+        android:text="@string/replace_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/query_data"
+        android:layout_alignParentStart="true"
+        android:id="@+id/replace_data" />
 </RelativeLayout>

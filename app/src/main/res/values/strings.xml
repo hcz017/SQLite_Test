@@ -4,4 +4,5 @@
     <string name="add_data">Add data</string>
     <string name="update_data">Update data</string>
     <string name="delete_data">Delete data</string>
+    <string name="replace_data">Replace data</string>
 </resources>
